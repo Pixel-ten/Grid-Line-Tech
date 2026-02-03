@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            display: none;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        @media (min-width:0) and (max-width:575px) {
+            button {
+                display: inline;
+            }
+
+            nav {
+                display: none;
+                /* flex-direction: column; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">btn</button>
+    <nav id="nav">
+        <ul id="ul">
+            <li>home</li>
+            <li>about</li>
+            <li>gallary</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+
+    <script>
+        var click = false;
+        btn.addEventListener("click", function () {
+            var btn = document.getElementById("btn");
+            var nav = document.getElementById("nav");
+            var ul = document.getElementById("ul");
+            if (click === false) {
+                nav.style.display = "flex";
+                ul.style.flexDirection = "column";
+                nav.style.position = "absolute";
+                nav.style.top = "50px";
+                nav.style.left0 = "50px";
+                click = true;
+            } else {
+                nav.style.display = "none";
+                // nav.style.position="none";
+                click = false;
+            }
+
+        });
+    </script>
+</body>
+
+</html>
