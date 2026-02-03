@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
-        button {
-            display: none;
-        }
-
         nav ul {
             display: flex;
             justify-content: center;
@@ -18,21 +15,26 @@
             list-style: none;
         }
 
+        .nav_icon{
+            font-size: 25px;
+            font-weight: bold;
+            display: none;
+        }
+
         @media (min-width:0) and (max-width:575px) {
-            button {
+            .nav_icon {
                 display: inline;
             }
 
             nav {
                 display: none;
-                /* flex-direction: column; */
             }
         }
     </style>
 </head>
 
 <body>
-    <button id="btn">btn</button>
+    <i class="bi bi-list nav_icon" id="nav_icon"></i>
     <nav id="nav">
         <ul id="ul">
             <li>home</li>
@@ -43,9 +45,8 @@
     </nav>
 
     <script>
-        var click = false;
-        btn.addEventListener("click", function () {
-            var btn = document.getElementById("btn");
+        var navClick = false;
+        document.getElementById("nav_icon").addEventListener("click", function () {
             var nav = document.getElementById("nav");
             var ul = document.getElementById("ul");
             if (click === false) {
@@ -54,11 +55,10 @@
                 nav.style.position = "absolute";
                 nav.style.top = "50px";
                 nav.style.left0 = "50px";
-                click = true;
+                navClick = true;
             } else {
                 nav.style.display = "none";
-                // nav.style.position="none";
-                click = false;
+                navClick = false;
             }
 
         });
