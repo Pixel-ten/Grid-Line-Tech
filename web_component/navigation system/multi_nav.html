@@ -48,15 +48,19 @@
             display: none;
         }
 
-        nav ul li:hover ul {
+        nav ul li:is(:hover, :focus-within) ul {
             display: flex;
         }
 
-        nav ul li:hover ul ul {
+        /* nav ul li:focus-within ul {
+            display: flex;
+        } */
+
+        nav ul li:is(:hover, :focus-within) ul ul {
             display: none;
         }
 
-        nav ul li ul li:hover ul {
+        nav ul li ul li:is(:hover, :focus-within) ul {
             display: flex;
         }
 
@@ -71,15 +75,57 @@
 <body>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>about</li>
-            <li>contact</li>
-            <li>courses
+            <li tabindex="0">Home
                 <ul>
-                    <li>&1</li>
-                    <li>&2</li>
-                    <li>&3</li>
-                    <li>&4
+                    <li tabindex="0">&1</li>
+                    <li tabindex="0">&2</li>
+                    <li tabindex="0">&3</li>
+                    <li tabindex="0">&4
+                        <ul>
+                            <li>@1</li>
+                            <li>@2</li>
+                            <li>@3</li>
+                            <li>@4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li tabindex="0">about
+                <ul>
+                    <li tabindex="0">&1</li>
+                    <li tabindex="0">&2</li>
+                    <li tabindex="0">&3</li>
+                    <li tabindex="0">&4
+                        <ul>
+                            <li>@1</li>
+                            <li>@2</li>
+                            <li>@3</li>
+                            <li>@4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li tabindex="0">contact
+                <ul>
+                    <li tabindex="0">&1</li>
+                    <li tabindex="0">&2</li>
+                    <li tabindex="0">&3</li>
+                    <li tabindex="0">&4
+                        <ul>
+                            <li>@1</li>
+                            <li>@2</li>
+                            <li>@3</li>
+                            <li>@4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li tabindex="0">courses
+                <ul>
+                    <li tabindex="0">&1</li>
+                    <li tabindex="0">&2</li>
+                    <li tabindex="0">&3</li>
+                    <li tabindex="0">&4
                         <ul>
                             <li>@1</li>
                             <li>@2</li>
