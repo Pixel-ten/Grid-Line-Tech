@@ -6,16 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./nav_root.css">
     <style>
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-            list-style: none;
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
 
-        .nav_icon{
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            gap: 25px;
+            padding: var(--ul_padding);
+            /* background: var(--ul_bg_1); */
+        }
+
+        nav ul li {
+            background: var(--li_bg_1);
+            position: relative;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        nav ul ul {
+            position: absolute;
+            top: calc(100%);
+            left: -10px;
+            flex-direction: column;
+            display: none;
+        }
+
+        nav ul ul ul{
+            top: -10px;;
+            left: calc(100%);
+            display: none;
+        }
+
+
+        nav ul li:is(:hover, :focus-within) ul{
+            display: flex;
+        }
+        nav ul li:hover ul ul{
+            display: none;
+        }
+        nav ul li ul li:hover ul{
+            display: flex;
+        }
+        .nav_icon {
             font-size: 25px;
             font-weight: bold;
             display: none;
@@ -29,6 +73,13 @@
             nav {
                 display: none;
             }
+            nav ul ul {
+            position: absolute;
+            top: -10px;
+            left:  calc(100%);
+            flex-direction: column;
+            display: none;
+        }
         }
     </style>
 </head>
@@ -41,6 +92,21 @@
             <li>about</li>
             <li>gallary</li>
             <li>contact</li>
+            <li>courses
+                <ul>
+                    <li>DDTA</li>
+                    <li>CDTA</li>
+                    <li>DITA</li>
+                    <li>CITA
+                        <ul>
+                            <li>CITA1</li>
+                            <li>CITA2</li>
+                            <li>CITA3</li>
+                            <li>CITA4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -66,4 +132,3 @@
 </body>
 
 </html>
-
