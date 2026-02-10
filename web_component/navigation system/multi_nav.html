@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./nav_root.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            gap: 10px;
+            padding: var(--ul_padding);
+            /* background-color: red; */
+        }
+
+        nav ul li {
+            background-color: var(--li_bg_1);
+            position: relative;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        nav ul ul {
+            position: absolute;
+            top: calc(100%);
+            left: -10px;
+            flex-direction: column;
+            display: none;
+        }
+
+        nav ul ul ul {
+            top: -10px;
+            left: calc(100%);
+            display: none;
+        }
+
+        nav ul li:hover ul {
+            display: flex;
+        }
+
+        nav ul li:hover ul ul {
+            display: none;
+        }
+
+        nav ul li ul li:hover ul {
+            display: flex;
+        }
+
+        .nav_icon {
+            font-size: 25px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>about</li>
+            <li>contact</li>
+            <li>courses
+                <ul>
+                    <li>&1</li>
+                    <li>&2</li>
+                    <li>&3</li>
+                    <li>&4
+                        <ul>
+                            <li>@1</li>
+                            <li>@2</li>
+                            <li>@3</li>
+                            <li>@4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
