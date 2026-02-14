@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./search_root.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background: red;
+        }
+
+        #search_box_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #search_inp {
+            width: 0;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        #search_icon_container {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            right: -3rem;
+            border: 2px solid black;
+            color: white;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 25px;
+        }
+        a {
+            color: white;
+        }
+
+        #close_icon {
+            width: 0;
+            height: 0;
+            z-index: 0;
+            display: none;
+        }
+
+        /* #search_box_container:hover #search_inp {
+            width: 300px;
+            padding: 1rem;
+        }
+
+        #search_box_container:hover #search_icon_container {
+            background: none;
+        }
+
+        #search_box_container:hover #close_icon {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            right: -5rem;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 25px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="search_box_container">
+        <input type="text" placeholder="search your items" id="search_inp">
+        <div id="search_icon_container">
+            <a href="#" id="search_icon_link">
+                <i class="bi bi-search" id="search_icon"></i>
+            </a>
+        </div>
+        <i class="bi bi-x-lg" id="close_icon"></i>
+    </div>
+
+    <script>
+        var searchIconcontainer = document.getElementById("search_icon_container");
+        var searchInput = document.getElementById("search_inp");
+        var searchBcontainer = document.getElementById("search_box_container");
+        var searchIconlink = document.getElementById("search_icon_link");
+        var searchicon = document.getElementById("search_icon");
+        var searchCloseicon = document.getElementById("close_icon");
+        searchIconcontainer.addEventListener("click", function () {
+            searchInput.style.width = "250px";
+            searchInput.style.padding = "1rem";
+            searchInput.style.transition = "all .3s linear";
+            searchIconcontainer.style.border = "none";
+            searchCloseicon.style.height = "50px";
+            searchCloseicon.style.width = "50px";
+            searchCloseicon.style.position = "absolute";
+            searchCloseicon.style.right = "-5rem";
+            searchCloseicon.style.color = "white";
+            searchCloseicon.style.display = "grid";
+            searchCloseicon.style.placeItems = "center";
+            searchCloseicon.style.fontSize = "25px";
+        });
+
+        searchCloseicon.addEventListener("click", function(){
+            searchInput.style.width = "0";
+            searchInput.style.padding = "0";
+            searchInput.style.transition = "all .3s linear";
+            searchIconcontainer.style.border = "2px solid black";
+            searchCloseicon.style.height = "0";
+            searchCloseicon.style.width = "0";
+            searchCloseicon.style.position = "none";
+            searchCloseicon.style.right = "0";
+            searchCloseicon.style.color = "white";
+            searchCloseicon.style.display = "none";
+        });
+
+
+
+    </script>
+</body>
+
+</html>
