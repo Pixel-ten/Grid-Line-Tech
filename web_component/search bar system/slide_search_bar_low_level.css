@@ -1,0 +1,39 @@
+#search_box_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#search_inp {
+    width: 0;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+
+#search_icon_container {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: -3rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+a {
+    color: black;
+}
+
+#close_icon {
+    width: 0;
+    height: 0;
+    z-index: 0;
+    display: none;
+}
