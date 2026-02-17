@@ -10,50 +10,39 @@
     <style>
         body {
             width: 99vw;
-            height: 90vh;
+            height: 98vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            
         }
 
         #modal_v_none_cont {
-            width: 99vw;
+            width: 100vw;
             height: 100vh;
-            background: rgba(19, 83, 109, 0.116);
+            background:rgba(19, 83, 109, 0.116);
             display: none;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
         }
 
         #modal_container {
             width: 200px;
             height: 250px;
             border-radius: 15px;
-            padding: 8px;
             background: red;
+            position: relative;
             display: none;
-            justify-content: start;
-            align-items: center;
-            flex-direction: column;
             position: absolute;
             top: 35%;
-            left: 45%;
             z-index: 1;
-        }
-
-        .modal_close_box {
-            width: 100%;
-            display: flex;
-            justify-content: end;
-            align-items: center;
         }
 
         #modal_close {
             color: white;
+            position: absolute;
+            top: 10px;
+            right: 10px;
             font-size: 25px;
         }
     </style>
@@ -61,11 +50,10 @@
 
 <body>
     <button id="modal_open">click</button>
-    <div id="modal_v_none_cont"></div>
+    <div id="modal_v_none_cont">
+    </div>
     <div id="modal_container">
-        <div class="modal_close_box">
-            <i class="bi bi-x-lg" id="modal_close"></i>
-        </div>
+        <i class="bi bi-x-lg" id="modal_close"></i>
     </div>
 
     <script>
@@ -81,16 +69,15 @@
 
         });
 
-        modalCoverbox.addEventListener("click", function () {
+       modalCoverbox.addEventListener("click", function () {
             modalCoverbox.style.display = "none";
             modalMaincontainer.style.display = "none";
         });
-        modalClose.addEventListener("click", function () {
+       modalClose.addEventListener("click", function () {
             modalCoverbox.style.display = "none";
             modalMaincontainer.style.display = "none";
         });
     </script>
 </body>
-
 
 </html>
