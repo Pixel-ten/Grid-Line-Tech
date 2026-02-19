@@ -1,1 +1,0 @@
-var btn = document.getElementById("password_inp");
