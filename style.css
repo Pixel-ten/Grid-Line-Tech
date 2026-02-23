@@ -1,0 +1,26 @@
+nav ul {
+    gap: 50px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    width: 150px !important;
+    height: 50px !important;
+    border-radius: 15px !important;
+    border: none !important;
+    background-color: rgb(75, 78, 78) !important;
+    color: white !important;
+    font-size: 25px !important;
+    overflow: hidden;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
