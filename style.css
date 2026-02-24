@@ -1,3 +1,4 @@
+/* header css styling strat*/
 header {
     height: 80px;
     background: var(--header_bg_color);
@@ -10,19 +11,28 @@ header {
 
 }
 
+/* logo section css styling strat*/
 .logo_box {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.navigation_box{
+.logo_txt {
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* logo section css styling end*/
+/* navigation section css styling strat*/
+.navigation_box {
     position: relative;
     /* width: 50px;
     height: 50px;
     background-color: white; */
 }
 
+/* ul section css styling strat*/
 nav ul {
     gap: 50px;
     list-style: none;
@@ -47,6 +57,23 @@ nav ul li a {
     color: white;
 }
 
+/* ul section css styling end*/
+/* navigation section css styling end*/
+/* header css styling end*/
+
+/* main css styling strat*/
+main {
+    margin-top: 80px;
+    padding-top: 12px;
+}
+
+/* work section css styling strat*/
+#work_section {
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* button section css styling strat*/
 button {
     width: 150px !important;
     height: 50px !important;
@@ -64,13 +91,6 @@ button a {
     font-size: 25px;
 }
 
-
-main {
-    margin-top: 80px;
-    padding-top: 12px;
-}
-
-#work_section {
-    flex-direction: column;
-    gap: 15px;
-}
+/* button section css styling end*/
+/* work section css styling end*/
+/* main css styling end*/
