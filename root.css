@@ -4,3 +4,9 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+:root{
+    --header_bg_color:rgb(33, 161, 212);
+    --header_txt_color:rgb(255, 255, 255);
+    --nav_bg_color:rgb(87, 143, 120);
+}
