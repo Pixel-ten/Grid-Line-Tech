@@ -39,6 +39,7 @@ nav ul li {
     font-weight: bold;
     border: 2PX solid rgba(255, 255, 255, 0.479);
     box-shadow: 1px 1px 5px gray;
+    overflow: hidden;
 }
 
 nav ul li a {
