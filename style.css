@@ -16,6 +16,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 8px;
+}
+
+.logo_img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
 
 .logo_txt {
@@ -94,3 +101,4 @@ button a {
 /* button section css styling end*/
 /* work section css styling end*/
 /* main css styling end*/
+
