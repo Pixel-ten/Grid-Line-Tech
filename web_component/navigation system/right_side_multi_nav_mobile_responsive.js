@@ -8,7 +8,7 @@ document.getElementById("nav_icon").addEventListener("click", function () {
         nav.style.position = "absolute";
         nav.style.top = "50px";
         nav.style.right = "0";
-        nav.style.left = "0";
+        nav.style.left = "-100vw";
         navClick = true;
     } else {
         nav.style.display = "none";
@@ -16,6 +16,7 @@ document.getElementById("nav_icon").addEventListener("click", function () {
     }
 
 });
+
 
 
 
