@@ -7,11 +7,12 @@ document.getElementById("nav_icon").addEventListener("click", function () {
         ul.style.flexDirection = "column";
         nav.style.position = "absolute";
         nav.style.top = "50px";
-        nav.style.right = "-5vw";
+        nav.style.right = "-6vw";
         nav.style.left = "-95vw";
         navClick = true;
     } else {
         nav.style.display = "none";
         navClick = false;
     }
+
 });
