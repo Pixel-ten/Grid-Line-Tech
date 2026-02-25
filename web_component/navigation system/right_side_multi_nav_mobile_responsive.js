@@ -7,7 +7,7 @@ document.getElementById("nav_icon").addEventListener("click", function () {
         ul.style.flexDirection = "column";
         nav.style.position = "absolute";
         nav.style.top = "50px";
-        nav.style.right = "-7vw";
+        nav.style.right = "-10vw";
         nav.style.left = "-95vw";
         navClick = true;
     } else {
@@ -16,4 +16,5 @@ document.getElementById("nav_icon").addEventListener("click", function () {
     }
 
 });
+
 
